@@ -1,8 +1,0 @@
-﻿  TestEngine.cpp
-C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\TestEngine.cpp(147,43): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\TestEngine.cpp(147,22): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\TestEngine.cpp(146,43): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\TestEngine.cpp(146,22): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\TestEngine.cpp(145,55): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\TestEngine.cpp(145,34): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-  TestEngine.vcxproj -> C:\Games\ZeNext-3D-Engine\ZeNext Engine\test\TestEngine\Debug\TestEngine.exe
