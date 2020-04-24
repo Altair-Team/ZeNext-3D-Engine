@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QDialog" name="Settings">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>489</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>489</width>
+    <height>402</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>489</width>
+    <height>402</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Настройки Gydrium Editor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(46, 47, 48);</string>
+  </property>
+  <widget class="QDialogButtonBox" name="OkCancelQDialogButtonBox">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>370</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Настройте систему под себя. </string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>251</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="title">
+    <string>Графика</string>
+   </property>
+   <widget class="QCheckBox" name="UseDynamicLightingQcheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>231</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Использовать динамическое освещение прямо в редакторе.&lt;/span&gt;&lt;br/&gt;Устали от постоянного &amp;quot;перекомпила&amp;quot; освещения? Включите динамическое освещение!&lt;br/&gt;Для того, чтобы это использовать, отметьте данный флаг.&lt;br/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;ВНИМАНИЕ! Потребуеться &lt;/span&gt;&lt;span style=&quot; font-style:italic; text-decoration: underline;&quot;&gt;больше&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;оперативной памяти нежели при статическом.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Использовать динамичное освещение</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="UseSSAOQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>231</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Использовать технологию SSAO для того, чтобы сгладить финальную картинку.&lt;/span&gt;&lt;br/&gt;Для того, чтобы убрать эффект &amp;quot;лесенки&amp;quot;, отметьте данный флаг.&lt;br/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Не работает если не включён флаг &amp;quot;Использовать постобработку шейдерами&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Использовать SSAO</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="UseShadersQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>231</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Использовать графическую обработку заданных шейдеров.&lt;/span&gt;&lt;br/&gt;Для того, чтобы увидеть сцены &amp;quot;как в игре&amp;quot;, отметьте данный флаг. &lt;br/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Не работает при отключенном освещении.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Использовать постобработку шейдерами</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="UseWireFrameQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>231</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Видимость моделей в системе Wireframe.&lt;/span&gt;&lt;br/&gt;Используется для того, чтобы увидеть полигоны моделей.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Модели - видно сетку</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DrawModelDistanceLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>231</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Дальность отрисовки моделей (Unit)</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="DrawDistanceQSlider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Дальность прорисовки моделей всех типов.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Количество Юнитов от камеры. Все объекты дальше этого растояния превращаются в solid - паралилепитеды.&lt;br/&gt;Установите нужный вам уровень.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="maximum">
+     <number>8000</number>
+    </property>
+    <property name="value">
+     <number>7300</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DrawDistanceEveryThingLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>231</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Дальность отрисовки всего (Unit)</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="DrawDistanceEveryThingQSlider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>181</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Дальность прорисовки всего остального. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;Дальность прорисовки брашей, скриптовых энтити, а так же поверхигровых объектов.&lt;br/&gt;Объекты, что находодяться дальше этого ранга, превращаются в пустые solid - параалелипитеды.&lt;br/&gt;Укажите нужный вам уровень отрисовки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="maximum">
+     <number>20000</number>
+    </property>
+    <property name="value">
+     <number>15000</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RangeOfBrushsLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>220</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Дальность прорисовки всего остального. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;Дальность прорисовки брашей, скриптовых энтити, а так же поверхигровых объектов.&lt;br/&gt;Объекты, что находодяться дальше этого ранга, превращаются в пустые solid - параалелипитеды.&lt;br/&gt;Укажите нужный вам уровень отрисовки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>15000</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RangeOfModelsLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>170</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Дальность прорисовки моделей всех типов.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Количество Юнитов от камеры. Все объекты дальше этого растояния превращаются в solid - паралилепитеды.&lt;br/&gt;Установите нужный вам уровень.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>7300</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="UseLoadLastProjectQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>231</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Запускать сразу последний проект, без диалога об новом.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Вы можете загружать последний использованный проект сразу после запуска Gydrium Editor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Запускать сразу последний проект</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="SystemQGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>30</y>
+     <width>211</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Система</string>
+   </property>
+   <widget class="QLabel" name="AviableRamLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Доступный пул памяти:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RangeOfMemoryForSystemLabel">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>40</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Количество доступной оперативной памяти для Gydrium Engine&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Укажите нужный уровень потребления оперативной памяти.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>1024</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="AviableMemorySizeQSlider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Количество доступной оперативной памяти для Gydrium Engine&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Укажите нужный уровень потребления оперативной памяти.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="minimum">
+     <number>1024</number>
+    </property>
+    <property name="maximum">
+     <number>4096</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="UsemultithredingQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Использовать многопоточность для приложения редактора.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Для того, чтобы повысить суммарную производительность, Gydrium Engine может использовать все возможности вашего процессора.&lt;br/&gt;Для того, чтобы задействовать эту возможность, отметьте данный флаг.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Использовать многопоточность</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="OtherGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>190</y>
+     <width>211</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Прочее</string>
+   </property>
+   <widget class="QCheckBox" name="UseSaveFileAutomaticlyQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сохранять файлы проекта автоматически.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Для того, чтобы предовратить потерю данных, Gydrium Engine будет сохранять файлы автоматически.&lt;br/&gt;Для того, чтобы отключить эту функцию, отключите флаг.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Сохранять файлы автоматически</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="UseLoadOthersFilesQCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Догружать файлы проекта в оперативную память.&lt;/span&gt;&lt;br/&gt;Не все ресурсы выбранного проекта загружаются сразу в оперативную память. &lt;br/&gt;Для того, чтобы загружать сразу все файлы проекта в оперативную память, пожалуйста отметьте этот флаг.&lt;br/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Так же желательно поставть максимальный уровень потребеления оперативной памяти.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Догружать файлы проекта</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>OkCancelQDialogButtonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Settings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OkCancelQDialogButtonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Settings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DrawDistanceEveryThingQSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>RangeOfBrushsLabel</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DrawDistanceQSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>RangeOfModelsLabel</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AviableMemorySizeQSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>RangeOfMemoryForSystemLabel</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

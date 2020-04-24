@@ -1,0 +1,6 @@
+﻿  TestEngine.cpp
+c:\games\hydririum engine\hydririum engine\test\testengine\testengine.cpp(631): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\games\hydririum engine\hydririum engine\test\testengine\testengine.cpp(638): warning C4244: аргумент: преобразование "float" в "int32_t", возможна потеря данных
+c:\games\hydririum engine\hydririum engine\test\testengine\testengine.cpp(59): warning C4715: mesh::LoadFromObjectFile: значение возвращается не при всех путях выполнения
+c:\games\hydririum engine\hydririum engine\test\testengine\testengine.cpp(365): warning C4715: TestEngine::Triangle_ClipAgainstPlane: значение возвращается не при всех путях выполнения
+  TestEngine.vcxproj -> C:\Games\Hydririum Engine\Hydririum Engine\test\TestEngine\x64\Debug\TestEngine.exe
